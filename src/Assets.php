@@ -8,6 +8,7 @@ class PROJECT_Assets {
     public function wp_enqueue_scripts() {
         wp_enqueue_style('google-font-poppins', 'https://fonts.googleapis.com/css?family=Poppins&display=swap');
         wp_enqueue_style( 'project-main-style', get_stylesheet_directory_uri() . '/assets/css/index.css', array(), time() );
+        wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
         wp_enqueue_script( 'project-main-js', get_stylesheet_directory_uri() . '/assets/js/index.js', array(), time() );
         wp_localize_script( 'project-main-js', 'projectData', [
             'ajax_url' => admin_url( 'admin-ajax.php' ),
